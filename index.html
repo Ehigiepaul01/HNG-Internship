@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 1 Task</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>My Week one Task Solution</h1>
+
+    <div class="personal-data">
+      <div data-testid="slackUserName">
+        <h2>Slack Username: <span>Paul Ehigie</span></h2>
+      </div>
+
+      <div class="slack-image">
+        <img src="./image/image.jpeg" alt="Slack Username" data-testid="slackDisplayImage" />
+      </div>
+
+      <div data-testid="currentDayOfTheWeek" class="date">
+        <h3>Current day of the week:</h3>
+        <p id="dayOfTheWeek"></p>
+      </div>
+
+      <div data-testid="currentUTCTime" class="time">
+        <h3>Current UTC Time:</h3>
+        <p id="utcTime"></p>
+      </div>
+
+      <div data-testid="myTrack" class="track">
+        <h3>Track: <span>Frontend Track</span></h3>
+      </div>
+
+      <h1><a href="https://www.github.com/Ehigiepaul01" data-testid="githubURL"
+        >Visit My GitHub</a
+      ></h1>
+    </div>
+
+    <script>
+      // Function to update the day of the week and UTC time
+      function updateDateTime() {
+        const currentDate = new Date();
+        const dayOfTheWeekElement = document.getElementById("dayOfTheWeek");
+        const utcTimeElement = document.getElementById("utcTime");
+
+        // Display the current day of the week
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const dayIndex = currentDate.getUTCDay();
+        const dayName = daysOfWeek[dayIndex];
+
+        dayOfTheWeekElement.textContent = dayName;
+
+        // Display the current UTC time in a readable format
+        const utcTimeString = currentDate.toISOString();
+        utcTimeElement.textContent = utcTimeString;
+      }
+
+      // Update the day of the week and UTC time every second
+      setInterval(updateDateTime, 1000);
+
+      // Initial update
+      updateDateTime();
+    </script>
+  </body>
+</html>

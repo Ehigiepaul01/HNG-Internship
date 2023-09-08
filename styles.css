@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: lightgrey;
+}
+
+.personal-data {
+    background-color: white;
+}
+
+h1 {
+    text-transform: capitalize;
+    font-size: 30px;
+    background-color: gray;
+    padding: 15px;
+    color: white;
+}
+
+span {
+    font-weight: 500;
+}
+
+h2 {
+    padding: 15px;
+}
+
+ img {
+    height: 50%;
+}
+
+.time, .date, .track {
+   padding: 10px;
+}
+
+p {
+    padding: 5px;
+}
+
+a {
+    background-color: gray;
+    color: white;
+    font-size: 26px;
+}
