@@ -23,20 +23,12 @@ h1 {
     color: white;
 }
 
-span {
-    font-weight: 500;
-}
-
 h2 {
     padding: 15px;
 }
 
  img {
     height: 50%;
-}
-
-.time, .date, .track {
-   padding: 10px;
 }
 
 p {
